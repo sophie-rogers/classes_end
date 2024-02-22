@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="script.js"></script>
+</head>
+
+<body style="position: flex;">
+
+    <container class="left" style="float:left" ;>
+        <h1>Enter numbers</h1>
+     
+        <form>
+            1st Number : <input type="text" id="firstNumber" /><br>
+            2nd Number: <input type="text" id="secondNumber" /><br>
+            <input type="button" id="Button" onClick="calculateRes(this.value)" Value="Add"/>
+            <input type="button" id="Button" onClick="calculateRes(this.value)" Value="Subtract" />
+            <input type="button" id="Button" onClick="calculateRes(this.value)" Value="Multiply" />
+            <input type="button" id="Button" onClick="calculateRes(this.value)" Value="Divide" />
+        </form>
+
+    </container>
+
+    <container class="right"  style="float:right";>
+     
+     <h1>Results</h1>
+     <p><span id="result"></span></p>
+       
+    </container>
+
+</body>
+
+</html>

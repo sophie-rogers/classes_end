@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search JavaScript Array for HTML Search Term</title>
+</head>
+
+<body>
+
+    <input type="text" id="searchInput" placeholder="Type to search">
+    <button onclick="searchArray()">Search</button>
+
+    <script>
+        function searchArray() {
+            // Get the search term from the input field
+            var searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+
+            const array = [{
+                    name: 'Sofia Ross',
+                    address: '5 Harbour road, Rochester'
+                },
+                {
+                    name: 'Dominic Hall',
+                    address: '30 Park Road, Sittingbourne'
+                },
+                {
+                    name: 'Emma Clark',
+                    address: '12 Discovery Drive, Canterbury'
+                },
+                {
+                    name: 'Sam Jackson',
+                    address: '13 Hight Street, Dover'
+                },
+                {
+                    name: 'Alexander Miller',
+                    address: '20 London Road, Ashford'
+                },
+                {
+                    name: 'Martin Butler',
+                    address: '18 Church Street, Maidstone'
+                },]
+
+                // Array to store matching elements
+                var matchingElements = [];
+
+                // Loop through the array and check if each element contains the search term
+                for (var i = 0; i < array.length; i++) {
+                    var element = array[i].toString().toLowerCase();
+                    if (element.includes(searchTerm)) {
+                        matchingElements.push(array[i]);
+                    }
+                }
+
+                // Display the matching elements
+                if (matchingElements.length > 0) {
+                    alert('Found ' + matchingElements.length + ' matching element(s): ' + matchingElements.join(
+                        ', '));
+                } else {
+                    alert('No matching element found.');
+                }
+            }
+    </script>
+
+</body>
+
+</html>
